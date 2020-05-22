@@ -1,6 +1,7 @@
 const express = require('express')
 const boom = require('boom')
 const userRouter = require('./user')
+const bookRouter = require('./book')
 const jwtAuth = require('./jwt')
 const Result = require('../models/Result')
 
@@ -13,7 +14,7 @@ router.get('/', function(req, res) {
   res.send('欢迎学习')
 })
 router.use('/vue-element-admin/user', userRouter) // 路由的嵌套
-
+router.use('/vue-element-admin/book', bookRouter)
 
 // 集中处理404请求的中间件
 router.use((req, res, next) => {

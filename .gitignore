@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+admin-upload-ebook/
 
 # Log file
 *.log
